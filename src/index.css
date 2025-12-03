@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Warm, friendly color palette */
+    --background: 42 100% 98%;
+    --foreground: 218 25% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 218 25% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 25% 20%;
+
+    /* Teal primary for trust and safety */
+    --primary: 178 65% 45%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-light: 178 65% 85%;
+    --primary-glow: 178 65% 60%;
+
+    /* Warm coral accent for energy */
+    --accent: 14 90% 65%;
+    --accent-foreground: 0 0% 100%;
+    
+    --accent-light: 14 90% 85%;
+    --accent-glow: 14 90% 75%;
+
+    /* Warm amber for warnings/surge */
+    --warning: 38 92% 60%;
+    --warning-foreground: 218 25% 20%;
+
+    /* Success green */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Soft secondary */
+    --secondary: 42 45% 92%;
+    --secondary-foreground: 218 25% 20%;
+
+    --muted: 42 30% 94%;
+    --muted-foreground: 218 15% 50%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 42 25% 88%;
+    --input: 42 25% 88%;
+    --ring: 178 65% 45%;
+
+    --radius: 1rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(178 65% 45%), hsl(178 65% 60%));
+    --gradient-warm: linear-gradient(180deg, hsl(42 100% 98%), hsl(42 80% 95%));
+    --gradient-accent: linear-gradient(135deg, hsl(14 90% 65%), hsl(38 92% 60%));
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 8px hsl(218 25% 20% / 0.08);
+    --shadow-medium: 0 4px 16px hsl(218 25% 20% / 0.12);
+    --shadow-glow: 0 0 24px hsl(178 65% 60% / 0.25);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 218 30% 12%;
+    --foreground: 42 100% 98%;
+
+    --card: 218 25% 15%;
+    --card-foreground: 42 100% 98%;
+
+    --popover: 218 25% 15%;
+    --popover-foreground: 42 100% 98%;
+
+    --primary: 178 65% 55%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-light: 178 65% 35%;
+    --primary-glow: 178 65% 45%;
+
+    --accent: 14 85% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    --accent-light: 14 85% 40%;
+    --accent-glow: 14 85% 50%;
+
+    --warning: 38 90% 55%;
+    --warning-foreground: 218 30% 12%;
+
+    --success: 142 60% 50%;
+    --success-foreground: 0 0% 100%;
+
+    --secondary: 218 20% 20%;
+    --secondary-foreground: 42 100% 98%;
+
+    --muted: 218 15% 18%;
+    --muted-foreground: 42 40% 70%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 218 20% 22%;
+    --input: 218 20% 22%;
+    --ring: 178 65% 55%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(178 65% 55%), hsl(178 65% 40%));
+    --gradient-warm: linear-gradient(180deg, hsl(218 30% 12%), hsl(218 25% 15%));
+    --gradient-accent: linear-gradient(135deg, hsl(14 85% 60%), hsl(38 90% 55%));
+    
+    --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.2);
+    --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 24px hsl(178 65% 45% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
